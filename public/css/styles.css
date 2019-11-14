@@ -1,0 +1,56 @@
+* {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+* + * {
+  margin-top: 0 !important;
+}
+
+a,
+a:visited {
+  color: #00664f;
+}
+
+strong {
+  color: black;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+#root {
+  margin-top: 0;
+}
+
+#main-wrapper {
+  padding: 15px;
+}
+
+.lbh-container {
+  max-width: 1140px;
+}
