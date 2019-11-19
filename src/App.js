@@ -5,6 +5,7 @@ import Header from 'Components/Header';
 import Phase from 'Components/Phase';
 import Login from 'Pages/Login';
 import Search from 'Pages/Search';
+import Results from 'Pages/Results';
 
 export default class App extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class App extends Component {
           <Router>
             <Route path="/login" component={Login} />
             <PrivateRoute path="/" exact component={Search} />
+            <PrivateRoute path="/search" component={Results} />
           </Router>
         </div>
       </>

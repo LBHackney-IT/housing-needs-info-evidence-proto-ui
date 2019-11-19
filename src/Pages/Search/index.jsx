@@ -4,7 +4,7 @@ export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      biddingNo: ''
+      biddingNumber: ''
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -17,8 +17,8 @@ export default class Search extends Component {
   }
 
   searchLink() {
-    if (this.state.biddingNo) {
-      return `/search?biddingNo=${this.state.biddingNo}`;
+    if (this.state.biddingNumber) {
+      return `/search?biddingNumber=${this.state.biddingNumber}`;
     }
     return '';
   }
@@ -30,13 +30,13 @@ export default class Search extends Component {
         <br />
         <form action={this.searchLink()}>
           <div className="govuk-form-group">
-            <label className="govuk-label" htmlFor="biddingNo">
+            <label className="govuk-label" htmlFor="biddingNumber">
               Bidding Number
             </label>
             <input
               className="govuk-input"
               type="text"
-              name="biddingNo"
+              name="biddingNumber"
               onChange={this.handleInputChange}
             />
           </div>

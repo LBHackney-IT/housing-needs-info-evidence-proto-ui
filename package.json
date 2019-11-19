@@ -11,6 +11,12 @@
     "react-scripts": "3.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.7.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
@@ -21,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --watchAll",
     "eject": "react-scripts eject",
     "lint": "eslint --fix --ext js,jsx src --max-warnings 5 && echo 'Lint complete.'"
   },
@@ -39,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
