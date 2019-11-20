@@ -75,16 +75,16 @@ const getYearsAndMonths = function(d) {
 };
 
 const getAddedAheadOfYouCount = function(d) {
+  const urg = d.newMembers.URG[d.customerData.bedrooms];
+  const hom = d.newMembers.HOM[d.customerData.bedrooms];
+  const pry = d.newMembers.PRY[d.customerData.bedrooms];
+
   if (d.customerData.band === bands.HOM || d.customerData.band === bands.PRY) {
-    return d.newMembers.URG[d.customerData.bedrooms];
+    return urg ? urg : 0;
   }
 
   if (d.customerData.band === bands.GEN) {
-    return (
-      d.newMembers.URG[d.customerData.bedrooms] +
-      d.newMembers.HOM[d.customerData.bedrooms] +
-      d.newMembers.PRY[d.customerData.bedrooms]
-    );
+    return (urg ? urg : 0) + (hom ? hom : 0) + (pry ? pry : 0);
   }
 
   return 0;
