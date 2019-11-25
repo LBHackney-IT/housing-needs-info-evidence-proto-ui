@@ -14,11 +14,13 @@ export default class App extends Component {
         <Header />
         <Phase />
         <div id="main-wrapper">
-          <Router>
-            <Route path="/login" component={Login} />
-            <PrivateRoute path="/" exact component={Search} />
-            <PrivateRoute path="/search" component={Results} />
-          </Router>
+          <div className="lbh-container lbh-body">
+            <Router>
+              <Route path="/login" component={Login} />
+              <PrivateRoute path="/" exact component={Search} />
+              <PrivateRoute path="/search" component={Results} />
+            </Router>
+          </div>
         </div>
       </>
     );

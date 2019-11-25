@@ -42,7 +42,6 @@ export default class Header extends Component {
                 <span className="lbh-header__logo-text">Hackney</span>
               </a>
             </h1>
-            <div className="lbh-header__content">INFO AND EVIDENCE</div>
           </div>
         </div>
       </header>

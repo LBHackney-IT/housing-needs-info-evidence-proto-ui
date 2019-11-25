@@ -1,0 +1,42 @@
+.progress {
+  display: flex;
+}
+
+.progress-image {
+}
+
+.progress-bar-wrapper {
+  width: 100%;
+  height: 30px;
+  margin: 50px 0 !important;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.progress-bar {
+  background-color: #00513f;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.progress-bar__position {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  background-color: #a4d65e;
+  border-radius: 50%;
+  border: 3px solid black;
+  z-index: 100;
+  position: absolute;
+  left: -15px;
+}
+
+.progress-bar__position > div {
+  text-align: center;
+  position: absolute;
+  top: -55px;
+  width: 200px;
+  left: -85px;
+}

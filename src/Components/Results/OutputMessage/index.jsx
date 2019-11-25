@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
-const bands = {
-  URG: 'URG',
-  HOM: 'HOM',
-  PRY: 'PRY',
-  GEN: 'GEN'
-};
+import {
+  bands,
+  getOverallPosition,
+  getEffectivePropertyCount,
+  getWaitTime,
+  getAddedAheadOfYouCount
+} from '../../../Lib/WaitingListHelpers';
 
 const getWaitingListSection = function(d) {
   return (
@@ -38,69 +38,18 @@ const getWaitingListSection = function(d) {
   );
 };
 
-const getCurrentAheadOfYouCount = function(d) {
-  if (d.customerData.band === bands.URG) {
-    return d.customerData.position - 1;
-  }
-
-  if (d.customerData.band === bands.HOM || d.customerData.band === bands.PRY) {
-    return (
-      d.listState.URG[d.customerData.bedrooms] + d.customerData.position - 1
-    );
-  }
-
-  if (d.customerData.band === bands.GEN) {
-    return (
-      d.listState.URG[d.customerData.bedrooms] +
-      d.listState.HOM[d.customerData.bedrooms] +
-      d.listState.PRY[d.customerData.bedrooms] +
-      d.customerData.position -
-      1
-    );
-  }
-
-  return 0;
-};
-
-const getEffectivePropertyCount = function(d) {
-  return d.newProperties[d.customerData.bedrooms] - getAddedAheadOfYouCount(d);
-};
-
-const getYearsAndMonths = function(d) {
-  const totalMonths = Math.ceil(
-    (getCurrentAheadOfYouCount(d) / getEffectivePropertyCount(d)) * 12
-  );
-
-  return `${Math.floor(totalMonths / 12)} years ${totalMonths % 12} months`;
-};
-
-const getAddedAheadOfYouCount = function(d) {
-  const urg = d.newMembers.URG[d.customerData.bedrooms];
-  const hom = d.newMembers.HOM[d.customerData.bedrooms];
-  const pry = d.newMembers.PRY[d.customerData.bedrooms];
-
-  if (d.customerData.band === bands.HOM || d.customerData.band === bands.PRY) {
-    return urg ? urg : 0;
-  }
-
-  if (d.customerData.band === bands.GEN) {
-    return (urg ? urg : 0) + (hom ? hom : 0) + (pry ? pry : 0);
-  }
-
-  return 0;
-};
-
 export default class OutputMessage extends Component {
   render() {
     const d = this.props.housingRegisterData;
+    const waitTime = getWaitTime(d);
     return (
       <div>
         <p>You are in the {d.customerData.band} band</p>
         <p>You are waiting for a {d.customerData.bedrooms} bedroom property</p>
         {getWaitingListSection(d)}
         <p>
-          This means there are {getCurrentAheadOfYouCount(d)} people ahead of
-          you in the list
+          This means there are {getOverallPosition(d) - 1} people ahead of you
+          in the list
         </p>
         <p>
           There were {d.newProperties[d.customerData.bedrooms]} new properties
@@ -117,8 +66,8 @@ export default class OutputMessage extends Component {
           properties taking people off the list last year
         </p>
         <p>
-          At that rate it will take {getYearsAndMonths(d)} for you to get to the
-          top of your band and get a property
+          At that rate it will take {waitTime.years} years {waitTime.months}{' '}
+          months for you to get to the top of your band and get a property
         </p>
       </div>
     );

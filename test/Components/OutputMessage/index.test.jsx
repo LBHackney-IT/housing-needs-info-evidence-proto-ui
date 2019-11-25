@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import HousingRegisterMockData from '../../mock_data/housing_register_mock_data';
-import OutputMessage from '../../../src/Components/OutputMessage';
+import OutputMessage from '../../../src/Components/Results/OutputMessage';
 
 describe('GenerateOutputMessage', function() {
   it('can generate the output message for an existing customer in the urgent band', async function() {
