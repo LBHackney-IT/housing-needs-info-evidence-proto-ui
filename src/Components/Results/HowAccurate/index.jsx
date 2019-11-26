@@ -22,6 +22,10 @@ export default class HowAccurate extends Component {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
         </details>
+        <button className="govuk-button lbh-button">
+          <img src="assets/images/progress/mobile.svg" alt="" />
+          Subscribe to monthly text updates
+        </button>
       </div>
     );
   }
