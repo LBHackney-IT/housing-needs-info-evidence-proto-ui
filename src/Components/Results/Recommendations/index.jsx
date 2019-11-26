@@ -35,7 +35,7 @@ export default class Recommendations extends Component {
     );
 
     if (this.props.waitTime.years < 1 && this.props.waitTime.months < 7) {
-      title = 'Our recommendation: Look at other options';
+      title = 'Our recommendation: Learn how to bid effectively';
       message = `To put yourself in the best position to receive a housing offer, it's important to know how to bid for properties effectively`;
       buttonText = 'Tips for bidding';
       content = (

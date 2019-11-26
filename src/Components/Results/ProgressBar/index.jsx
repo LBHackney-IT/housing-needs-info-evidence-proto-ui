@@ -3,7 +3,8 @@ import './index.css';
 
 export default class ProgressBar extends Component {
   render() {
-    const progress = (this.props.overallPosition / this.props.totalCount) * 100;
+    const progress =
+      100 - (this.props.overallPosition / this.props.totalCount) * 100;
 
     return (
       <div className="progress">
