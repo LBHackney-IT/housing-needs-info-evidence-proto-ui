@@ -124,3 +124,7 @@ p {
   width: 15px;
   margin-right: 15px;
 }
+
+.recommendations li {
+  padding: 15px;
+}

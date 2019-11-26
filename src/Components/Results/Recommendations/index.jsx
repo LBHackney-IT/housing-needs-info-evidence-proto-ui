@@ -8,28 +8,54 @@ export default class Recommendations extends Component {
     let buttonText = 'View options';
     let content = (
       <div>
-        <h3>Our recommendations</h3>
+        <div className="row" style={{ marginBottom: '50px' }}>
+          <h4>Find privately rented accommodation</h4>
+          <p>
+            Something about how quick it could be to rent privately and if
+            Hackney might be able to provide assistance?
+          </p>
+          <details
+            className="govuk-details lbh-details"
+            data-module="govuk-details"
+          >
+            <summary className="govuk-details__summary2 govuk-button lbh-button">
+              <span className="govuk-details__summary-text2">
+                Find privately rented accommodation
+              </span>
+            </summary>
+            <div className="govuk-details__text">
+              <strong>
+                If you decide to look for privately rented accommodation, the
+                Council may be able to provide the following assistance:
+              </strong>
+              <ul>
+                <li>1 month rent in advance</li>
+                <li>Security deposit paid</li>
+                <li>Landlord compliancy check</li>
+                <li>Longest possible tenancy terms</li>
+                <li>Pre-inspection of the property</li>
+                <li>etc etc</li>
+              </ul>
+            </div>
+          </details>
+        </div>
         <div className="row">
-          <div className="column">
-            <h4>Find privately rented accommodation</h4>
-            <p>
-              Something about how quick it could be to rent privately and if
-              Hackney might be able to provide assistance?
-            </p>
-            <button className="govuk-button lbh-button">
-              Where to find properties
-            </button>
-          </div>
-          <div className="column">
-            <h4>Alternative social housing schemes</h4>
-            <p>
-              Something about how quick it could be to rent privately and if
-              Hackney might be able to provide assistance?
-            </p>
-            <button className="govuk-button lbh-button">
-              Available schemes
-            </button>
-          </div>
+          <h4>Alternative social housing schemes</h4>
+          <p>
+            Something about how quick it could be to rent privately and if
+            Hackney might be able to provide assistance?
+          </p>
+          <details
+            className="govuk-details lbh-details"
+            data-module="govuk-details"
+          >
+            <summary className="govuk-details__summary2 govuk-button lbh-button">
+              <span className="govuk-details__summary-text2">
+                Available schemes
+              </span>
+            </summary>
+            <div className="govuk-details__text">etc etc</div>
+          </details>
         </div>
       </div>
     );
@@ -40,8 +66,6 @@ export default class Recommendations extends Component {
       buttonText = 'Tips for bidding';
       content = (
         <div>
-          <h3>Learn how to bid effectively</h3>
-          <hr />
           <h4>
             Our top 3 tips for you to maximise your chances of receiving a house
             offer:
@@ -71,23 +95,23 @@ export default class Recommendations extends Component {
     }
 
     return (
-      <>
+      <div className="recommendations">
         <section className="lbh-page-announcement">
           <h2 className="lbh-page-announcement__title">{title}</h2>
           <div className="lbh-page-announcement__content">
             <p>{message}</p>
           </div>
           <details
-            class="govuk-details lbh-details"
+            className="govuk-details lbh-details"
             data-module="govuk-details"
           >
-            <summary class="govuk-details__summary2 govuk-button lbh-button">
-              <span class="govuk-details__summary-text2">{buttonText}</span>
+            <summary className="govuk-details__summary2 govuk-button lbh-button">
+              <span className="govuk-details__summary-text2">{buttonText}</span>
             </summary>
-            <div class="govuk-details__text">{content}</div>
+            <div className="govuk-details__text">{content}</div>
           </details>
         </section>
-      </>
+      </div>
     );
   }
 }
