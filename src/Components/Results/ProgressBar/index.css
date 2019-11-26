@@ -2,7 +2,14 @@
   display: flex;
 }
 
-.progress-image {
+.progress img {
+  width: 80px;
+}
+
+.progress .progress-image {
+  text-align: center;
+  padding: 0 15px;
+  font-size: 10pt;
 }
 
 .progress-bar-wrapper {
@@ -15,7 +22,7 @@
 }
 
 .progress-bar {
-  background-color: #00513f;
+  background-color: #00664f;
   width: 100%;
   height: 20px;
   border-radius: 10px;

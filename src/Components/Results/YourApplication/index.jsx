@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {
   bands,
   getOverallPosition,
-  getTotalCount
+  getHousingRegisterCountForBedroomSize
 } from '../../../Lib/WaitingListHelpers';
 
 const styleBand = function(myBand, theirBand) {
@@ -30,11 +30,11 @@ export default class YourApplication extends Component {
         <table className="govuk-table lbh-table">
           <tbody className="govuk-table__body">
             <tr className="govuk-table__row">
-              <td className="govuk-table__cell">Bidding number:</td>
+              <td className="govuk-table__header">Bidding number:</td>
               <td className="govuk-table__cell">{this.props.biddingNumber}</td>
             </tr>
             <tr className="govuk-table__row">
-              <td className="govuk-table__cell">Your priority band:</td>
+              <td className="govuk-table__header">Your priority band:</td>
               <td className="govuk-table__cell">
                 {styleBand(this.props.data.customerData.band, bands.URG)}
               </td>
@@ -54,20 +54,22 @@ export default class YourApplication extends Component {
               </td>
             </tr>
             <tr className="govuk-table__row">
-              <td className="govuk-table__cell">Requirements:</td>
+              <td className="govuk-table__header">Requirements:</td>
               <td className="govuk-table__cell">
                 {this.props.data.customerData.bedrooms} bedroom
               </td>
             </tr>
             <tr className="govuk-table__row">
-              <td className="govuk-table__cell">Position:</td>
+              <td className="govuk-table__header">Position:</td>
               <td className="govuk-table__cell">
                 {getOverallPosition(this.props.data)} out of{' '}
-                {getTotalCount(this.props.data)}
+                {getHousingRegisterCountForBedroomSize(this.props.data)}
               </td>
             </tr>
           </tbody>
         </table>
+
+        <br />
 
         <div>
           <p>

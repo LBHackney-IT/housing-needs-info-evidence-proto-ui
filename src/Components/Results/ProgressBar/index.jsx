@@ -8,7 +8,7 @@ export default class ProgressBar extends Component {
     return (
       <div className="progress">
         <div className="progress-image">
-          <img src="assets/images/progress/application.svg"></img>
+          <img src="assets/images/progress/application.svg" alt="" />
           <p>Application</p>
         </div>
 
@@ -27,7 +27,7 @@ export default class ProgressBar extends Component {
           </div>
         </div>
         <div className="progress-image">
-          <img src="assets/images/progress/apartment.svg"></img>
+          <img src="assets/images/progress/apartment.svg" alt="" />
           <p>Housing Offer</p>
         </div>
       </div>

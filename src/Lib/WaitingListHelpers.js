@@ -38,7 +38,7 @@ export const getOverallPosition = function(d) {
   return 0;
 };
 
-export const getTotalCount = function(d) {
+export const getHousingRegisterCountForBedroomSize = function(d) {
   return (
     d.listState.URG[d.customerData.bedrooms] +
     d.listState.HOM[d.customerData.bedrooms] +
@@ -46,6 +46,20 @@ export const getTotalCount = function(d) {
     d.listState.GEN[d.customerData.bedrooms] +
     d.listState.RES[d.customerData.bedrooms]
   );
+};
+
+export const getHousingRegisterCount = function(d) {
+  return (
+    Object.values(d.listState.URG).reduce((a, b) => a + b, 0) +
+    Object.values(d.listState.HOM).reduce((a, b) => a + b, 0) +
+    Object.values(d.listState.PRY).reduce((a, b) => a + b, 0) +
+    Object.values(d.listState.GEN).reduce((a, b) => a + b, 0) +
+    Object.values(d.listState.RES).reduce((a, b) => a + b, 0)
+  );
+};
+
+export const getNewProperyCount = function(d) {
+  return d.newProperties[d.customerData.bedrooms];
 };
 
 export const getEffectivePropertyCount = function(d) {
