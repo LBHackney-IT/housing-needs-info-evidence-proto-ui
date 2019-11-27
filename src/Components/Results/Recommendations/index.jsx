@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class Recommendations extends Component {
   render() {
-    let title = 'Our recommendation: Look at other options';
+    let title = 'Our recommendation: Look at other solutions';
     let message =
       'Something about how quick it could be to rent privately and if Hackney might be able to provide assistance?';
     let buttonText = 'View options';

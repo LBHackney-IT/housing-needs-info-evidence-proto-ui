@@ -34,7 +34,7 @@ export default class Search extends Component {
             <ul>
               <li>Find your current position on the register</li>
               <li>Estimate your wait time</li>
-              <li>View recommended housing options</li>
+              <li>View recommended housing solutions</li>
             </ul>
           </div>
         </section>
