@@ -3,8 +3,15 @@ import './index.css';
 
 export default class ProgressBar extends Component {
   render() {
-    const progress =
-      100 - (this.props.overallPosition / this.props.totalCount) * 100;
+    // round percentage down to nearest 10 for display purposes
+    let progress =
+      Math.floor(
+        (100 - (this.props.overallPosition / this.props.totalCount) * 100) / 10
+      ) * 10;
+
+    if (progress === 0) {
+      progress = 10;
+    }
 
     return (
       <div className="progress">
