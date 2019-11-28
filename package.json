@@ -27,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watchAll",
+    "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint --fix --ext js,jsx src --max-warnings 5 && echo 'Lint complete.'"
   },

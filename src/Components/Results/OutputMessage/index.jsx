@@ -14,8 +14,7 @@ const getWaitingListSection = function(d) {
       {d.customerData.band === bands.URG && (
         <p>Urgent: you are in position {d.customerData.position}</p>
       )}
-      {(d.customerData.band === bands.HOM ||
-        d.customerData.band === bands.PRY) && (
+      {d.customerData.band === bands.HOM && (
         <>
           <p>Urgent: {d.listState.URG[d.customerData.bedrooms]}</p>
           <p>
@@ -26,11 +25,7 @@ const getWaitingListSection = function(d) {
       {d.customerData.band === bands.GEN && (
         <>
           <p>Urgent: {d.listState.URG[d.customerData.bedrooms]}</p>
-          <p>
-            Homeless + Priority:{' '}
-            {d.listState.HOM[d.customerData.bedrooms] +
-              d.listState.PRY[d.customerData.bedrooms]}
-          </p>
+          <p>Homeless + Priority: {d.listState.HOM[d.customerData.bedrooms]}</p>
           <p>General: you are in position {d.customerData.position}</p>
         </>
       )}
