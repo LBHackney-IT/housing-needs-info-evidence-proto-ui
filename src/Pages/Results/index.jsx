@@ -30,6 +30,9 @@ export default class Results extends Component {
       biddingNumber ? biddingNumber : ''
     );
 
+    // introduce delay so that results aren't instant :-)
+    await (() => new Promise(res => setTimeout(res, 2000)))();
+
     this.setState({
       biddingNumber: biddingNumber,
       data: response,
