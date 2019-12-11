@@ -11,7 +11,7 @@ export default class HowAccurate extends Component {
           days. New applications who have a higher housing need will take
           priority, and so your wait time may increase or decrease next month.
         </p>
-        <details className="govuk-details" data-module="govuk-details">
+        {/* <details className="govuk-details" data-module="govuk-details">
           <summary className="govuk-details__summary">
             <span className="govuk-details__summary-text">
               How this information is calculated
@@ -21,7 +21,7 @@ export default class HowAccurate extends Component {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
-        </details>
+        </details> */}
         <button className="govuk-button lbh-button">
           <img src="assets/images/progress/mobile.svg" alt="" />
           Subscribe to monthly text updates

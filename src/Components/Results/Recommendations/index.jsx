@@ -4,15 +4,15 @@ export default class Recommendations extends Component {
   render() {
     let title = 'Our recommendation: Look at other solutions';
     let message =
-      'Something about how quick it could be to rent privately and if Hackney might be able to provide assistance?';
+      'To help you find settled accommodation as soon as possible, we can support you in finding a home in the private rented sector or through other social housing schemes.';
     let buttonText = 'View options';
     let content = (
       <div>
         <div className="row" style={{ marginBottom: '50px' }}>
           <h4>Find privately rented accommodation</h4>
           <p>
-            Something about how quick it could be to rent privately and if
-            Hackney might be able to provide assistance?
+            Find out how to look for your own property, and how the Council may
+            be able to assist your move
           </p>
           <details
             className="govuk-details lbh-details"
@@ -34,16 +34,35 @@ export default class Recommendations extends Component {
                 <li>Landlord compliancy check</li>
                 <li>Longest possible tenancy terms</li>
                 <li>Pre-inspection of the property</li>
-                <li>etc etc</li>
+                <li>Practical and financial help with removals</li>
+                <li>
+                  Transport costs for viewing and moving it outside of London
+                </li>
+                <li>
+                  Financial assistance to provide white goods if they are not
+                  provided by the landlord
+                </li>
               </ul>
+              <div>
+                <p>
+                  <strong>Attend a training course</strong>
+                </p>
+                <p>
+                  The council provide free monthly tenancy training sessions for
+                  those wishing to find their own accommodation. To enquire
+                  about attending the next course, please{' '}
+                  <a href="/#">contact us</a>.
+                </p>
+              </div>
             </div>
           </details>
         </div>
         <div className="row">
           <h4>Alternative social housing schemes</h4>
           <p>
-            Something about how quick it could be to rent privately and if
-            Hackney might be able to provide assistance?
+            Depending on your circumstances, you may be eligible to join
+            alternative schemes to find you settled accommodation more quickly
+            in other parts of London, or further afield
           </p>
           <details
             className="govuk-details lbh-details"
@@ -51,7 +70,21 @@ export default class Recommendations extends Component {
           >
             <summary className="govuk-details__summary2 govuk-button lbh-button">
               <span className="govuk-details__summary-text2">
-                Available schemes
+                Available schemes for current tenants
+              </span>
+            </summary>
+            <div className="govuk-details__text">etc etc</div>
+          </details>
+          <div className="row">
+            <br />
+          </div>
+          <details
+            className="govuk-details lbh-details"
+            data-module="govuk-details"
+          >
+            <summary className="govuk-details__summary2 govuk-button lbh-button">
+              <span className="govuk-details__summary-text2">
+                Other available schemes
               </span>
             </summary>
             <div className="govuk-details__text">etc etc</div>

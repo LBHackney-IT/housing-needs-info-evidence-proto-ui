@@ -69,7 +69,7 @@ export default class YourApplication extends Component {
           </tbody>
         </table>
 
-        <br />
+        {/* <br />
 
         <div>
           <p>
@@ -78,7 +78,7 @@ export default class YourApplication extends Component {
           <p>
             <a href="#/">My circumstances have changed</a>
           </p>
-        </div>
+        </div> */}
       </>
     );
   }

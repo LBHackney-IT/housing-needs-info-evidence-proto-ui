@@ -21,7 +21,7 @@ export default class WhyIsThis extends Component {
                 <WhyIsThisHighlight
                   imageSrc="assets/images/progress/family.svg"
                   figure={this.props.aheadOfYou}
-                  text={`People ahead of you waiting for a ${this.props.bedrooms} bedroom property`}
+                  text={`People with a higher priority waiting for a ${this.props.bedrooms} bedroom property`}
                 />
               </div>
               <div className="column">
