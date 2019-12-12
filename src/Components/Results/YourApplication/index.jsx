@@ -69,16 +69,18 @@ export default class YourApplication extends Component {
           </tbody>
         </table>
 
-        {/* <br />
+        <br />
 
         <div>
-          <p>
+          {/* <p>
             <a href="#/">This information looks incorrect</a>
-          </p>
+          </p> */}
           <p>
-            <a href="#/">My circumstances have changed</a>
+            <a href="https://hackney.gov.uk/housing-coc" target="_blank">
+              My circumstances have changed
+            </a>
           </p>
-        </div> */}
+        </div>
       </>
     );
   }

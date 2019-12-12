@@ -48,10 +48,10 @@ export default class Recommendations extends Component {
                   <strong>Attend a training course</strong>
                 </p>
                 <p>
-                  The council provide free monthly tenancy training sessions for
+                  The Council provide free monthly tenancy training sessions for
                   those wishing to find their own accommodation. To enquire
-                  about attending the next course, please{' '}
-                  <a href="/#">contact us</a>.
+                  about attending the next course, please contact us on 020 8356
+                  4411.
                 </p>
               </div>
             </div>
@@ -120,9 +120,15 @@ export default class Recommendations extends Component {
               for which you may have a greater chance of success
             </li>
           </ol>
-          <button className="govuk-button lbh-button">
+          <a
+            href="https://www.ellcchoicehomes.org.uk/Data/ASPPages/1/53.aspx"
+            role="button"
+            draggable="false"
+            class="govuk-button lbh-button"
+            target="_blank"
+          >
             Bid for properties
-          </button>
+          </a>
         </div>
       );
     }

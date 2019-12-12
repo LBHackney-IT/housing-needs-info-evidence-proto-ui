@@ -128,3 +128,7 @@ p {
 .recommendations li {
   padding: 15px;
 }
+
+.govuk-details__text {
+  border-left: 0;
+}
