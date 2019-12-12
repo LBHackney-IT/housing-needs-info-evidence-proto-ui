@@ -76,7 +76,11 @@ export default class YourApplication extends Component {
             <a href="#/">This information looks incorrect</a>
           </p> */}
           <p>
-            <a href="https://hackney.gov.uk/housing-coc" target="_blank">
+            <a
+              href="https://hackney.gov.uk/housing-coc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               My circumstances have changed
             </a>
           </p>

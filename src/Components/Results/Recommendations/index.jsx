@@ -126,6 +126,7 @@ export default class Recommendations extends Component {
             draggable="false"
             class="govuk-button lbh-button"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Bid for properties
           </a>
