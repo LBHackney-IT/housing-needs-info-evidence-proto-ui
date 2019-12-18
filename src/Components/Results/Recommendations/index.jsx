@@ -70,10 +70,150 @@ export default class Recommendations extends Component {
           >
             <summary className="govuk-details__summary2 govuk-button lbh-button">
               <span className="govuk-details__summary-text2">
-                Available schemes for current tenants
+                Schemes available for current tenants
               </span>
             </summary>
-            <div className="govuk-details__text">etc etc</div>
+            <div className="govuk-details__text">
+              <details class="govuk-details lbh-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Transfer to another social housing property within London
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>
+                    The Housing Moves scheme is the Mayor of London’s scheme to
+                    help social tenants in London to relocate to other boroughs.
+                  </p>
+                  <p>
+                    All council tenants and housing association tenants can
+                    apply under the scheme, as long as they have a secure or
+                    assured tenancy. Priority is given to:
+                  </p>
+                  <ul>
+                    <li>
+                      people who have more bedrooms than they need and wish to
+                      downsize
+                    </li>
+                    <li>people in work or training</li>
+                    <li>people who want to move to give care</li>
+                  </ul>
+                  <p>
+                    To find out more and to register for the scheme please visit
+                    the{' '}
+                    <a
+                      href="https://www.housingmoves.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Housing moves webpage
+                    </a>
+                  </p>
+                </div>
+              </details>
+              <details class="govuk-details lbh-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Mutual exchanges within Hackney
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>
+                    As a social tenant you can apply to exchange properties with
+                    other council tenants within the borough or with tenants
+                    from another council, housing association or other housing
+                    provider.
+                  </p>
+                  <p>
+                    You can get a mutual exchange application form by contacting
+                    your local neighbourhood housing office by phone or email.
+                  </p>
+                  <p>
+                    By phone - 020 8356 3330
+                    <br />
+                    By email - neighbourhood@hackney.gov.uk
+                  </p>
+                </div>
+              </details>
+              <details class="govuk-details lbh-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Mutual exchanges in other parts of the country
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>
+                    <a
+                      href="https://www.homeswapper.co.uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      HomeSwapper
+                    </a>{' '}
+                    can help you to swap your council or housing association
+                    home with other social tenants with over 20,000 properties
+                    available
+                  </p>
+                </div>
+              </details>
+              <details class="govuk-details lbh-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Fresh Start Scheme
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>
+                    Our fresh start scheme enables you to move outside of London
+                    into private rented accommodation. If you are over the age
+                    of 55 you can also use the scheme to get sheltered housing
+                    accommodation outside of London.
+                  </p>
+                  <p>
+                    To join the scheme you must be a Hackney resident and
+                    either:
+                  </p>
+                  <ul>
+                    <li>a secure council tenant OR</li>
+                    <li>
+                      a housing association tenant (where your landlord will
+                      give the property to the council to let)
+                    </li>
+                  </ul>
+                  <p>
+                    For more information on the scheme please contact - 020 8356
+                    4411 or email - housingsupply@hackney.gov.uk
+                  </p>
+                </div>
+              </details>
+              <details class="govuk-details lbh-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    National schemes for over 55s
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>
+                    The Seaside and Country Homes Scheme is open to Council or
+                    housing association tenants who live in London and want to
+                    relocate the countryside or the coast. All applicants must
+                    be at least 60 years of age and capable of independent
+                    living.
+                  </p>
+                  <p>Find out more by contacting - 020 8356 5751/7232.</p>
+                  <p>
+                    Or visit the{' '}
+                    <a
+                      href="https://www.london.gov.uk/what-we-do/housing-and-land/council-and-social-housing/seaside-and-country-homes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Seaside and Country Homes webpage
+                    </a>
+                  </p>
+                </div>
+              </details>
+            </div>
           </details>
           <div className="row">
             <br />
@@ -87,7 +227,30 @@ export default class Recommendations extends Component {
                 Other available schemes
               </span>
             </summary>
-            <div className="govuk-details__text">etc etc</div>
+            <div className="govuk-details__text">
+              <p>
+                If you don’t currently have an existing social tenancy, we
+                recommend registering with{' '}
+                <a
+                  href="https://homefinderuk.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Homefinder UK
+                </a>
+              </p>
+              <p>
+                Homefinder UK is a national housing mobility scheme available to
+                anyone willing to move nationwide including:
+              </p>
+              <ul>
+                <li>Homeless households</li>
+                <li>Applicants living in temporary accommodation</li>
+                <li>Private sector tenants threatened with homelessness</li>
+                <li>Victims of domestic abuse &amp; grooming</li>
+                <li>Overcrowded families &amp; social tenants</li>
+              </ul>
+            </div>
           </details>
         </div>
       </div>
